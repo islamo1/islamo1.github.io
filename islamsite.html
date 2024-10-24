@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع إسلام الشخصي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-image: url('image/background\ image.jpg'); /* مسار الصورة */
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: rgb(255, 255, 255); /* لون النص */
+        }
+        header {
+            background-color: rgba(180, 34, 34, 0.7); /* لون رأس الصفحة مع شفافية */
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        section {
+            margin: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5); /* لون خلفية القسم مع شفافية */
+            border-radius: 5px; /* زوايا دائرية */
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons i {
+            margin: 0 10px;
+            font-size: 24px; /* حجم الأيقونات الاجتماعية */
+        }
+        .language {
+            display: none; /* إخفاء كل الأقسام بشكل افتراضي */
+        }
+        .active {
+            display: block; /* إظهار القسم النشط فقط */
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .skills-list i {
+            margin-left: 10px; /* مسافة بين النص والأيقونة */
+            font-size: 20px; /* حجم الأيقونات */
+        }
+        .language-logos {
+            margin: 20px 0; /* مساحة لللوجو */
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* مسافة بين الشعارات */
+        }
+        .language-logos img {
+            width: 60px; /* عرض اللوغو */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال */
+        }
+        .language-logos img:hover {
+            transform: scale(1.1); /* تكبير اللوغو عند التحويم */
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* إضافة ظل */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>إسلام - مهندس حاسوب ومبرمج</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me-arabic" style="color: rgb(0, 0, 0);">معلوماتي (About Me)</a></li>
+                <li><a href="#skills-arabic" style="color: rgb(0, 0, 0);">مهاراتي (Skills)</a></li>
+                <li><a href="#" onclick="showLanguage('arabic')"><img src="flags/saudi.png.png" alt="العربية"> العربية</a></li>
+                <li><a href="#" onclick="showLanguage('turkish')"><img src="flags/turkey.png.png" alt="Türkçe"> Türkçe</a></li>
+                <li><a href="#" onclick="showLanguage('english')"><img src="flags/uk.png.png" alt="English"> English</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me-arabic" class="language active" data-lang="arabic">
+        <h2>ملخص عني</h2>
+        <p>     
+        إسلام أصلان، أبلغ من العمر 20 عامًا، شغوف بالألعاب الرقمية وخاصة لعبة فيفا. أحب التكنولوجيا وكل ما يتعلق بعالم الحاسوب، مما دفعني إلى دراسة هندسة الحاسوب في جامعة سوتشو أمام في مرعش، تركيا.  أمتلك خبرة في تصليح أجهزة الكمبيوتر وأستمتع بحل المشكلات التقنية، وأطمح إلى تطوير مهاراتي باستمرار في هذا المجال.
+        </p>
+    </section>
+
+    <section id="about-me-turkish" class="language" data-lang="turkish">
+        <h2>Hakkımda</h2>
+        <p>Ben İslam Aslan, 20 yaşındayım, dijital oyunlara, özellikle FIFA'ya tutkum var. Teknolojiye ve bilgisayar dünyasına büyük ilgi duymaktayım, bu nedenle Türkiye'de K.Maraş'ta Sütçü İmam Üniversitesi'nde Bilgisayar Mühendisliği Bölümü okumaktayım. Bilgisayar donanımı tamiri konusunda deneyime sahibim, teknik sorunları çözmekten zevk almaktayım ve bu alanda becerilerimi sürekli olarak geliştirmeye çalışmaktayım.</p>
+    </section>
+
+    <section id="about-me-english" class="language" data-lang="english">
+        <h2>About Me</h2>
+        <p>I'm Islam Aslan, a 20-year-old young man, who is passionate about digital games, especially FIFA. I loves technology and everything related to computers, which led me to pursue a degree in Computer Engineering at Sütçü İmam University in K.Maraş, Turkey. I have experience in repairing computers and I enjoy solving technical problems, and I'm constantly striving to enhance my skills in the field.</p>
+    </section>
+
+    <section id="skills-arabic" class="language active" data-lang="arabic">
+        <h2>مهاراتي</h2>
+        <ul class="skills-list">
+            <li>C </li>
+            <li>C++ </li>
+            <li>HTML </li>
+            <li>CSS </li>
+            <li>التعامل مع الكمبيوتر</li>
+        </ul>
+        <div class="language-logos" id="language-logos"> <!-- إضافة ID هنا -->
+            <img src="skills/c.png" alt="C Logo">
+            <img src="skills/c++.png" alt="C++ Logo">
+            <img src="skills/HTML.png" alt="HTML Logo">
+            <img src="skills/CSS.png" alt="CSS Logo">
+        </div>
+    </section>
+
+    <section id="skills-turkish" class="language" data-lang="turkish">
+        <h2>Yeteneklerim</h2>
+        <ul class="skills-list">
+            <li>C </li>
+            <li>C++ </li>
+            <li>HTML </li>
+            <li>CSS </li>
+            <li>Bilgisayar Kullanımı</li>
+        </ul>
+        <div class="language-logos">
+            <img src="skills/c.png" alt="C Logo">
+            <img src="skills/c++.png" alt="C++ Logo">
+            <img src="skills/HTML.png" alt="HTML Logo">
+            <img src="skills/CSS.png" alt="CSS Logo">
+        </div>
+    </section>
+
+    <section id="skills-english" class="language" data-lang="english">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>C </li>
+            <li>C++ </li>
+            <li>HTML </li>
+            <li>CSS </li>
+            <li>Computer Proficiency</li>
+        </ul>
+        <div class="language-logos">
+            <img src="skills/c.png" alt="C Logo">
+            <img src="skills/c++.png" alt="C++ Logo">
+            <img src="skills/HTML.png" alt="HTML Logo">
+            <img src="skills/CSS.png" alt="CSS Logo">
+        </div>
+    </section>
+       
+    <section id="social-arabic" class="language active" data-lang="arabic">
+        <h2>تواصل معي</h2>
+        <div class="social-icons">
+            <i class="fab fa-instagram" onclick="window.open('https://instagram.com//_irazzuk_10/profilecard/?igsh=bXV3ajI4dmp5bzNw', '_blank');"></i>
+            <i class="fab fa-facebook" onclick="window.open('https://facebook.com/اسم-حسابك', '_blank');"></i>
+            <i class="fab fa-discord" onclick="window.open('https://discord.com/users/Uchiha', '_blank');"></i>
+            <i class="fab fa-whatsapp" onclick="window.open('https://wa.me/05316861234', '_blank');"></i>
+        </div>
+    </section>
+
+    <section id="social-turkish" class="language" data-lang="turkish">
+        <h2>Benimle İletişime Geçin</h2>
+        <div class="social-icons">
+            <i class="fab fa-instagram" onclick="window.open('https://instagram.com//_irazzuk_10/profilecard/?igsh=bXV3ajI4dmp5bzNw', '_blank');"></i>
+            <i class="fab fa-facebook" onclick="window.open('https://facebook.com/اسم-حسابك', '_blank');"></i>
+            <i class="fab fa-discord" onclick="window.open('https://discord.com/users/Uchiha', '_blank');"></i>
+            <i class="fab fa-whatsapp" onclick="window.open('https://wa.me/05316861234', '_blank');"></i>
+        </div>
+    </section>
+
+    <section id="social-english" class="language" data-lang="english">
+        <h2>Contact Me</h2>
+        <div class="social-icons">
+            <i class="fab fa-instagram" onclick="window.open('https://instagram.com//_irazzuk_10/profilecard/?igsh=bXV3ajI4dmp5bzNw', '_blank');"></i>
+            <i class="fab fa-facebook" onclick="window.open('https://facebook.com/اسم-حسابك', '_blank');"></i>
+            <i class="fab fa-discord" onclick="window.open('https://discord.com/users/Uchiha', '_blank');"></i>
+            <i class="fab fa-whatsapp" onclick="window.open('https://wa.me/05316861234', '_blank');"></i>
+        </div>
+    </section>
+     <script>
+
+function showLanguage(lang) {
+    const sections = document.querySelectorAll('.language');
+    sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.dataset.lang === lang) {
+            section.classList.add('active');
+            if (lang === 'arabic') {
+                location.hash = '#skills-arabic'; // الانتقال إلى قسم المهارات
+            } else if (lang === 'turkish') {
+                location.hash = '#skills-turkish'; // الانتقال إلى قسم المهارات
+            } else if (lang === 'english') {
+                location.hash = '#skills-english'; // الانتقال إلى قسم المهارات
+            }
+        }
+    });
+}
+     </script>
+</body>
+</html>
+
+
+
